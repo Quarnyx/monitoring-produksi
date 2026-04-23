@@ -1,0 +1,14 @@
+<?php
+
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'monitor_produksi');
+
+$link = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if ($link->connect_error) {
+    die("Koneksi database gagal: " . $link->connect_error);
+}
+
+?>
