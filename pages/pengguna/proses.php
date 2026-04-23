@@ -6,7 +6,8 @@ switch ($_GET['aksi'] ?? '') {
         $username = $_POST['username'];
         $nama = $_POST['nama'];
         $password = md5($_POST['password']);
-        $sql = "INSERT INTO pengguna (username, password, nama) VALUES ('$username', '$password', '$nama')";
+        $level = $_POST['level'];
+        $sql = "INSERT INTO pengguna (username, password, nama, level) VALUES ('$username', '$password', '$nama', '$level')";
         $result = $link->query($sql);
         if ($result) {
             http_response_code(200);
@@ -19,8 +20,9 @@ switch ($_GET['aksi'] ?? '') {
     case 'edit':
         $username = $_POST['username'];
         $nama = $_POST['nama'];
+        $level = $_POST['level'];
         $id = $_POST['id'];
-        $sql = "UPDATE pengguna SET username = '$username', nama = '$nama' WHERE id = '$id'";
+        $sql = "UPDATE pengguna SET username = '$username', nama = '$nama', level = '$level' WHERE id = '$id'";
         $result = $link->query($sql);
         if ($result) {
             http_response_code(200);

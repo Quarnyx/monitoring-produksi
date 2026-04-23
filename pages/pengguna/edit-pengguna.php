@@ -19,6 +19,13 @@ $row = $result->fetch_assoc();
                 <input type="text" name="username" class="form-control" placeholder="Username"
                     value="<?= $row['username'] ?>">
             </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Level</label>
+                <select name="level" class="form-select" required>
+                    <option value="admin" <?= $row['level'] == 'admin' ? 'selected' : '' ?>>Admin</option>
+                    <option value="qc" <?= $row['level'] == 'qc' ? 'selected' : '' ?>>QC</option>
+                </select>
+            </div>
         </div>
 
         <div class="row">

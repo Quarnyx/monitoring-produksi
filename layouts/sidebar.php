@@ -27,51 +27,63 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="?page=data-pengguna">
-                    <span class="nav-icon">
-                        <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
-                    </span>
-                    <span class="nav-text"> Data Pengguna </span>
-                </a>
-            </li>
+            <?php
+            if ($_SESSION['level'] == 'admin') { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="?page=data-pengguna">
+                        <span class="nav-icon">
+                            <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
+                        </span>
+                        <span class="nav-text"> Data Pengguna </span>
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="?page=data-produk">
-                    <span class="nav-icon">
-                        <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
-                    </span>
-                    <span class="nav-text"> Data Produk </span>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="?page=data-produk">
+                        <span class="nav-icon">
+                            <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
+                        </span>
+                        <span class="nav-text"> Data Produk </span>
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="?page=kategori-defect-produk">
-                    <span class="nav-icon">
-                        <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
-                    </span>
-                    <span class="nav-text"> Kategori Defect Produk </span>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="?page=kategori-defect-produk">
+                        <span class="nav-icon">
+                            <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
+                        </span>
+                        <span class="nav-text"> Kategori Defect Produk </span>
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="?page=rekam-produksi">
-                    <span class="nav-icon">
-                        <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
-                    </span>
-                    <span class="nav-text"> Rekam Produksi </span>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="?page=rekam-produksi">
+                        <span class="nav-icon">
+                            <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
+                        </span>
+                        <span class="nav-text"> Rekam Produksi </span>
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="?page=laporan-produksi">
-                    <span class="nav-icon">
-                        <iconify-icon icon="solar:document-text-outline"></iconify-icon>
-                    </span>
-                    <span class="nav-text"> Laporan Produksi </span>
-                </a>
-            </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="?page=laporan-produksi">
+                        <span class="nav-icon">
+                            <iconify-icon icon="solar:document-text-outline"></iconify-icon>
+                        </span>
+                        <span class="nav-text"> Laporan Produksi </span>
+                    </a>
+                </li>
+            <?php }
+            if ($_SESSION['level'] == 'qc') { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="?page=rekam-produksi">
+                        <span class="nav-icon">
+                            <iconify-icon icon="solar:widget-2-outline"></iconify-icon>
+                        </span>
+                        <span class="nav-text"> Rekam Produksi </span>
+                    </a>
+                </li>
+            <?php } ?>
         </ul>
     </div>
 </div>

@@ -13,8 +13,15 @@
 
         <div class="col-lg-6">
             <div class="mb-3">
+                <label class="form-label">Hak Akses</label>
+                <select class="form-select" id="form-select" name="level" required>
+                    <option value="admin">Admin</option>
+                    <option value="qc">QC</option>
+                </select>
+            </div>
+            <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
         </div>
     </div>

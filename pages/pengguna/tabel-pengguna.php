@@ -4,6 +4,7 @@
             <th>#</th>
             <th>Nama</th>
             <th>Username</th>
+            <th>Level</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -21,6 +22,9 @@
                 <td><?= $no ?></td>
                 <td><?= $data['nama'] ?></td>
                 <td><?= $data['username'] ?></td>
+                <td>
+                    <?= $data['level'] ?>
+                </td>
                 <td>
                     <button data-id="<?= $data['id'] ?>" data-name="<?= $data['username'] ?>" id="edit-password"
                         type="button" class="btn btn-success">Ganti Password</button>

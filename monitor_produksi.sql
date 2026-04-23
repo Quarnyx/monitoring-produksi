@@ -11,7 +11,7 @@
  Target Server Version : 80030 (8.0.30)
  File Encoding         : 65001
 
- Date: 23/04/2026 12:41:48
+ Date: 23/04/2026 15:58:48
 */
 
 SET NAMES utf8mb4;
@@ -29,9 +29,9 @@ CREATE TABLE `detail_produksi_defect`  (
   `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `produk_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `id_produk`(`produk_id` ASC) USING BTREE,
   INDEX `kategori_defect_id`(`kategori_defect_id` ASC) USING BTREE,
   INDEX `hasil_produksi_id`(`hasil_produksi_id` ASC) USING BTREE,
+  INDEX `id_produk`(`produk_id` ASC) USING BTREE,
   CONSTRAINT `detail_produksi_defect_ibfk_2` FOREIGN KEY (`kategori_defect_id`) REFERENCES `kategori_defect` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `detail_produksi_defect_ibfk_3` FOREIGN KEY (`hasil_produksi_id`) REFERENCES `hasil_produksi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `detail_produksi_defect_ibfk_4` FOREIGN KEY (`produk_id`) REFERENCES `produk` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -185,15 +185,16 @@ CREATE TABLE `pengguna`  (
   `nama` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `level` enum('admin','qc') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `uq_nama_pengguna`(`username` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pengguna
 -- ----------------------------
-INSERT INTO `pengguna` VALUES (8, 'admin', 'admin', '0192023a7bbd73250516f069df18b500');
-INSERT INTO `pengguna` VALUES (11, 'roo', 'asdlsa', '81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `pengguna` VALUES (8, 'admin', 'admin', '0192023a7bbd73250516f069df18b500', 'admin');
+INSERT INTO `pengguna` VALUES (11, 'Karyawan A', 'karyawan', '07142c5501c3ea09303d899012e2b47d', 'qc');
 
 -- ----------------------------
 -- Table structure for produk
