@@ -4,7 +4,7 @@
             <th>#</th>
             <th>Nama Produk</th>
             <th>Kode Produk</th>
-            <th>Variasi Produk</th>
+            <th>Style Produk</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -51,7 +51,7 @@
                 }
             })
         });
-        
+
         $('#tabel-data-produk').on('click', '#delete', function () {
             const id = $(this).data('id');
             const name = $(this).data('name');

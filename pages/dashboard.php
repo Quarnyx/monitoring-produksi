@@ -88,7 +88,7 @@ while ($row = mysqli_fetch_assoc($bar_query)) {
                         </div>
                     </div>
                     <div class="col-6 text-end">
-                        <p class="text-muted mb-0 text-truncate">Produksi Hari Ini</p>
+                        <p class="text-muted mb-0 text-truncate">Total Produksi</p>
                         <h3 class="text-dark mt-2 mb-0"><?= $total_produksi; ?></h3>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ while ($row = mysqli_fetch_assoc($bar_query)) {
                         </div>
                     </div>
                     <div class="col-6 text-end">
-                        <p class="text-muted mb-0 text-truncate">Bagus Hari Ini</p>
+                        <p class="text-muted mb-0 text-truncate">Good</p>
                         <h3 class="text-dark mt-2 mb-0"><?= $total_bagus; ?></h3>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ while ($row = mysqli_fetch_assoc($bar_query)) {
                         </div>
                     </div>
                     <div class="col-6 text-end">
-                        <p class="text-muted mb-0 text-truncate">Reject Hari Ini</p>
+                        <p class="text-muted mb-0 text-truncate">Not Good</p>
                         <h3 class="text-dark mt-2 mb-0"><?= $total_reject; ?></h3>
                     </div>
                 </div>
@@ -169,7 +169,7 @@ while ($row = mysqli_fetch_assoc($bar_query)) {
                         </div>
                     </div>
                     <div class="col-6 text-end">
-                        <p class="text-muted mb-0 text-truncate">Defect Hari Ini</p>
+                        <p class="text-muted mb-0 text-truncate">Defect</p>
                         <h3 class="text-dark mt-2 mb-0"><?= $total_defect; ?></h3>
                     </div>
                 </div>
@@ -189,7 +189,7 @@ while ($row = mysqli_fetch_assoc($bar_query)) {
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Total Bagus vs Reject (Hari Ini)</h4>
+                <h4 class="header-title">Good vs Not Good</h4>
                 <div id="pie-chart-today" class="apex-charts"></div>
             </div>
         </div>

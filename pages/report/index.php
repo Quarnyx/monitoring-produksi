@@ -78,7 +78,7 @@ while ($row = mysqli_fetch_assoc($bar_query)) {
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Total Bagus vs Reject</h4>
+                <h4 class="header-title">Good vs Not Good</h4>
                 <div id="pie-chart" class="apex-charts"></div>
             </div>
         </div>
